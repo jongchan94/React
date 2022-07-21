@@ -23,3 +23,31 @@ public : static 파일 보관함 (웹사이트 이미지 같은것)
 src : 소스코드 보관함 (코드 짜는 곳)
 
 package.json : 설치한 라이브러리 목록
+
+---
+
+
+<JSX 문법>
+
+1.태그에 class를 주고 싶으면 
+
+<div class=”클래스명”>   :X
+
+<div className=”클래스명”> : O
+
+<JSX 사용법>
+
+1. 리액트에서 데이터 바인딩 쉽게할수 있게 도와주와주는 라이브러리
+    
+    src,id,href 등의 속성에도 {변수명,함수 등} 가능 
+    
+
+ 2.  JSX에서 style 속성 집어넣을 때
+
+<div style = { { color : ‘blue’ } } >
+
+style = { object 자료형으로 만든 스타일}
+
+font-size 는 FontSize로 camelCase 로 해야함
+
+변수에 할당되어서 하는것도 가능
