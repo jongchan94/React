@@ -12,7 +12,9 @@ function App() {
 
   // #2 useState
   // useState('남자 코트 추천');
-  let [글제목,b] = useState('여자 코트 추천');
+  let [글제목,b] = useState('여자 코트 추천',);
+  let [글제목2,c] = useState('남자 코트 추천',);
+  let [글제목3,d] = useState('아기 코트 추천',);
 
 
 
@@ -23,7 +25,8 @@ function App() {
 
       {/* #1 문법 */}
       <div className="black-nav">
-        <h4 style={ {color : 'red', fontSize : '16px' } }>블로그임</h4>
+        {/* <h4 style={ {color : 'red', fontSize : '16px' } }>블로그임</h4> */}
+        <h4>RaectBlog</h4>
       </div>
       
       {/* #2 list */}
@@ -34,6 +37,17 @@ function App() {
         
       </div>
 
+      <div className="list">
+        <h4>{글제목2}</h4>
+        <p>8월 4일 발행</p>
+        
+      </div>
+
+      <div className="list">
+        <h4>{글제목3}</h4>
+        <p>8월 4일 발행</p>
+        
+      </div>
        
        
         {/* <h4>{post}</h4> */}
@@ -57,6 +71,7 @@ function App() {
   // a는 보관했던 자료 나옴 b는 state 변경도와주는 함수
   // 왜 써야함? 변수랑 차이가 좀있음 !일반변수는 html 자동으로 반영안됌
   // state는 변경되면 html은 자동 재렌더링 됨
+  // 자주변경될거같은 html 부분은 state로 만들어놓기
   );
 }
 
