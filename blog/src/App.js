@@ -18,7 +18,7 @@ function App() {
 
   // #2 useState
   // useState('남자 코트 추천');
-  let [글제목,b] = useState(['여자 코트 추천','남자 코트 추천','아기 코트 추천']);
+  let [글제목, 글제목변경] = useState(['여자 코트 추천','남자 코트 추천','아기 코트 추천']);
 
   // #3 좋아요 클릭하면 숫자가 올라가는 기능
   let [좋아요, 좋아요변경] = useState(0);
@@ -30,6 +30,8 @@ function App() {
   //   console.log(1);
 
   // }
+
+  
 
 
   return (
@@ -56,7 +58,7 @@ function App() {
         */}
         <h4>{글제목[0]} <span onClick={ () => { 좋아요변경(좋아요+1)}}>👍</span> {좋아요} </h4>
         <p>8월 4일 발행</p>
-        
+        <button onClick = { () => {글제목변경( 글제목[1] )}}>버튼</button>
       </div>
 
       <div className="list">
