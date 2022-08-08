@@ -1,3 +1,9 @@
+// eslint-disoble
+// Lint 끄는 기능
+
+
+
+
 import logo from './logo.svg';
 // css 파일 경로
 import './App.css';
@@ -12,9 +18,7 @@ function App() {
 
   // #2 useState
   // useState('남자 코트 추천');
-  let [글제목,b] = useState('여자 코트 추천',);
-  let [글제목2,c] = useState('남자 코트 추천',);
-  let [글제목3,d] = useState('아기 코트 추천',);
+  let [글제목,b] = useState(['여자 코트 추천','남자 코트 추천','아기 코트 추천']);
 
 
 
@@ -32,19 +36,19 @@ function App() {
       {/* #2 list */}
 
       <div className="list">
-        <h4>{글제목}</h4>
+        <h4>{글제목[0]} <span>👍</span> 0 </h4>
         <p>8월 4일 발행</p>
         
       </div>
 
       <div className="list">
-        <h4>{글제목2}</h4>
+        <h4>{글제목[1]}</h4>
         <p>8월 4일 발행</p>
         
       </div>
 
       <div className="list">
-        <h4>{글제목3}</h4>
+        <h4>{글제목[2]}</h4>
         <p>8월 4일 발행</p>
         
       </div>
