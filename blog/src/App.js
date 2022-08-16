@@ -75,6 +75,11 @@ function App() {
           글제목변경(copy); 
 
           }}>버튼</button>
+
+
+
+
+          
       </div>
 
       <div className="list">
@@ -92,7 +97,24 @@ function App() {
        
         {/* <h4>{post}</h4> */}
     
+
     
+        {/* #5 모달 */}
+          {/* 컴포넌트 만드는 법*/}
+          {/* 1.fucntion 만든다  < 다른 function 바깥에 만든다 / 영어 대문자
+              2.return() 안에 html 담기
+              3.<함수명></함수명>만들기
+          */}
+          {/* <div className="modal">
+            <h4>제목</h4>
+            <p>날씨</p>
+            <p>상세내용</p>
+          </div> */}
+
+
+          <Modal></Modal>
+
+
     </div> //return
   
   // #1
@@ -114,5 +136,24 @@ function App() {
   // 자주변경될거같은 html 부분은 state로 만들어놓기
   );
 }
+
+
+// component 
+
+// Modal를 component로 부른다
+
+function Modal(){
+  return(
+
+            <div className="modal">
+            <h4>제목</h4>
+            <p>날씨</p>
+            <p>상세내용</p>
+          </div> 
+
+
+  )
+}
+
 
 export default App;
