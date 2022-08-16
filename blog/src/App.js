@@ -114,7 +114,7 @@ function App() {
 
           <Modal></Modal>
 
-
+          <List> </List>
     </div> //return
   
   // #1
@@ -142,6 +142,13 @@ function App() {
 
 // Modal를 component로 부른다
 
+// 어쩔때 component로 쓰면 좋은가
+//  1.반복적인 html 축약할 때
+//  2.큰 페이지들
+//  3. 자주 변경되는 것들
+
+// 단점 : state 가져다 쓸 때 문제생김
+
 function Modal(){
   return(
 
@@ -155,5 +162,17 @@ function Modal(){
   )
 }
 
+
+function List(){
+    return(
+      <div className="11">
+        <h4>하이</h4>
+        <p>오 신기방기</p>
+        <p>이것이 컴포넌트</p>
+      </div>
+
+    )
+
+}
 
 export default App;
