@@ -96,7 +96,9 @@ function App() {
       </div>
 
       <div className="list">
-        <h4 onClick={ ()=> setModal('열림')}>{글제목[2]}</h4>
+        {/* <h4 onClick={ ()=> setModal('열림') }>{글제목[2]}</h4> */}
+        <h4 onClick={ ()=> {   setModal(!modal) } }>{글제목[2]}</h4>
+            {modal ? <Modal></Modal> : null}
         <p>8월 4일 발행</p>
         
       </div>
