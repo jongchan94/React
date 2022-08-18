@@ -32,6 +32,10 @@ function App() {
   // }
 
   
+  // #6 동적인 모달 만들기
+
+  let [modal, setModal] = useState();
+  
 
 
   return (
@@ -114,7 +118,7 @@ function App() {
 
           <Modal></Modal>
 
-          <List> </List>
+       
     </div> //return
   
   // #1
@@ -162,17 +166,5 @@ function Modal(){
   )
 }
 
-
-function List(){
-    return(
-      <div className="11">
-        <h4>하이</h4>
-        <p>오 신기방기</p>
-        <p>이것이 컴포넌트</p>
-      </div>
-
-    )
-
-}
 
 export default App;
