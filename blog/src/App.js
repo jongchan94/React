@@ -32,9 +32,12 @@ function App() {
   // }
 
   
+
   // #6 동적인 모달 만들기
 
-  let [modal, setModal] = useState();
+  // 오른쪽엔 set...로하는게 일반적인 관습 
+  // useState('닫힘,false') 형식은 자유
+  let [modal, setModal] = useState('닫힘');
   
 
 
@@ -93,7 +96,7 @@ function App() {
       </div>
 
       <div className="list">
-        <h4>{글제목[2]}</h4>
+        <h4 onClick={ ()=> setModal('열림')}>{글제목[2]}</h4>
         <p>8월 4일 발행</p>
         
       </div>
@@ -116,7 +119,21 @@ function App() {
           </div> */}
 
 
-          <Modal></Modal>
+
+
+        {/* #6 state가 true면 보여주세요~ */}
+            
+
+          {
+            /* 삼항연산자 */
+            // 조건식 ? 참일때 실행할 코드 : 거짓일 때 실행할 코드
+            // html중간에 조건문 쓰렴면 삼항연산자써야함
+
+            modal == '열림' ? <Modal></Modal> : '아님'
+            // null은 비어있는 html용으로 자주사용
+          }
+
+
 
        
     </div> //return
