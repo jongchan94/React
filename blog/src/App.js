@@ -31,7 +31,8 @@ function App() {
 
   // }
 
-  
+  // #7 div를 반복문으로 줄이고 싶을 때 
+   [1,2,3].map()
 
   // #6 동적인 모달 만들기
 
@@ -97,6 +98,7 @@ function App() {
 
       <div className="list">
         {/* <h4 onClick={ ()=> setModal('열림') }>{글제목[2]}</h4> */}
+        {/* 느낌표는 우측 자료를 반대로 바궈줌 */}
         <h4 onClick={ ()=> {   setModal(!modal) } }>{글제목[2]}</h4>
             {modal ? <Modal></Modal> : null}
         <p>8월 4일 발행</p>
