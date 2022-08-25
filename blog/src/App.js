@@ -32,7 +32,19 @@ function App() {
   // }
 
   // #7 div를 반복문으로 줄이고 싶을 때 
-   [1,2,3].map()
+  // 모든 어레이 자료옆에 붙일 수 있다  콜백함수 써야함
+
+  // array 자료 갯수만큼 함수안의 코드 실행해줌
+  // 콜백함수 a , 함수의 파라미터는 array안에 있던 자료임
+  // retru에 적으면 array로 담아 준다
+   [1,2,3].map(function(a){
+    // console.log(a)
+    return '1122334422';
+
+
+
+
+   });
 
   // #6 동적인 모달 만들기
 
@@ -103,13 +115,24 @@ function App() {
             {modal ? <Modal></Modal> : null}
         <p>8월 4일 발행</p>
         
+          {/* #7 map */}
+          {
+            [1,2,3].map(function(){
+
+              return <div>안녕</div>            })
+         }
+
+
+
+
       </div>
        
        
         {/* <h4>{post}</h4> */}
     
 
-    
+
+
         {/* #5 모달 */}
           {/* 컴포넌트 만드는 법*/}
           {/* 1.fucntion 만든다  < 다른 function 바깥에 만든다 / 영어 대문자
