@@ -117,9 +117,20 @@ function App() {
         
           {/* #7 map */}
           {
-            [1,2,3].map(function(){
 
-              return <div>안녕</div>            })
+            // 어레이 1,2,3은 한계가 있음 실제 블로그 갯수만큼 생성하려면? state
+            글제목.map(function(){
+            // [1,2,3].map(function(){
+
+              return (
+                <div className="list">
+                  <h4>{글제목[1]}</h4>
+                  <p>8월 4일 발행</p>
+                  
+                </div>)      
+           })
+
+
          }
 
 
