@@ -119,20 +119,25 @@ function App() {
           {
 
             // 어레이 1,2,3은 한계가 있음 실제 블로그 갯수만큼 생성하려면? state
-            글제목.map(function(){
+            글제목.map(function(a , i){
             // [1,2,3].map(function(){
 
               return (
                 <div className="list">
-                  <h4>{글제목[1]}</h4>
+                  <h4>{a}</h4>
+                  {/* 글제목[i] 가능 */}
                   <p>8월 4일 발행</p>
                   
                 </div>)      
            })
 
+          //  map()함수
+          // 왼쪽 array 자료 만큼 내부코드 실행해줌
+          //  retunrn 오른쪽에 있는걸 array 담아줌
+          //  유용한 파라미터 2개 사용가능
+      
 
          }
-
 
 
 
