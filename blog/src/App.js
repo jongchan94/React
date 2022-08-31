@@ -22,7 +22,7 @@ function App() {
 
   // #3 좋아요 클릭하면 숫자가 올라가는 기능
   let [좋아요, 좋아요변경] = useState(0,1,2);
-  let copy2 = [...좋아요]
+
   
   // 좋아요변경는 state변경용 함수임 
 
@@ -139,7 +139,10 @@ function App() {
 
               return (
                 <div className="list" key ={i}>
-                  <h4>{a} <span onClick={ () => { copy2[0](좋아요+1)}}>👍</span> {좋아요[i]}</h4>
+                  {/* 다 같이 올라감 */}
+                  {/* <h4>{a} <span onClick={ () => { 좋아요변경(좋아요+1)}}>👍</span> {좋아요}</h4> */}
+                  <h4>{a} <span onClick={ () => { 좋아요변경(좋아요+1)}}>👍</span> {좋아요}</h4>
+                  
                   {/* 글제목[i] 가능 */}
                   <p>8월 4일 발행</p>
                   
