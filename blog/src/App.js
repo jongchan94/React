@@ -22,7 +22,8 @@ function App() {
 
   // #3 좋아요 클릭하면 숫자가 올라가는 기능
   let [좋아요, 좋아요변경] = useState(0,1,2);
-
+  let copy2 = [...좋아요]
+  
   // 좋아요변경는 state변경용 함수임 
 
   // 이렇게 하면 따로 써야하니 불편 일반적으로 직접 가서 쓴다
@@ -128,15 +129,17 @@ function App() {
         <p>8월 4일 발행</p>
         
           {/* #7 map */}
+          
           {
 
             // 어레이 1,2,3은 한계가 있음 실제 블로그 갯수만큼 생성하려면? state
+            
             글제목.map(function(a , i ){
             // [1,2,3].map(function(){
 
               return (
                 <div className="list" key ={i}>
-                  <h4>{a} <span onClick={ () => { 좋아요변경[0](좋아요+1)}}>👍</span> {좋아요[i]}</h4>
+                  <h4>{a} <span onClick={ () => { copy2[0](좋아요+1)}}>👍</span> {좋아요[i]}</h4>
                   {/* 글제목[i] 가능 */}
                   <p>8월 4일 발행</p>
                   
@@ -152,7 +155,7 @@ function App() {
          }
 
 
-
+        
       </div>
        
        
