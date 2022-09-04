@@ -190,7 +190,7 @@ function App() {
             // 조건식 ? 참일때 실행할 코드 : 거짓일 때 실행할 코드
             // html중간에 조건문 쓰렴면 삼항연산자써야함
 
-            modal == '열림' ? <Modal></Modal> : '아님'
+            // modal == '열림' ? <Modal></Modal> : '아님'
             // null은 비어있는 html용으로 자주사용
           }
 
