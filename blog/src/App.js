@@ -124,7 +124,7 @@ function App() {
       <div className="list">
         {/* <h4 onClick={ ()=> setModal('열림') }>{글제목[2]}</h4> */}
         {/* 느낌표는 우측 자료를 반대로 바궈줌 */} 
-        <h4 onClick ={ ()=> {setModal( !modal)  }}> {글제목[2]}</h4>
+        <h4 onClick ={ ()=> {setModal( '열림')  }}> {글제목[2]}</h4>
         <p>8월 4일 발행</p>
         
           {/* #7 map */}
@@ -189,10 +189,14 @@ function App() {
             // 조건식 ? 참일때 실행할 코드 : 거짓일 때 실행할 코드
             // html중간에 조건문 쓰렴면 삼항연산자써야함
             // 1 == 1 ? '아님' : '아님'
-            modal == '열림' ? <Modal></Modal> : null
+
+            // modal == '열림' ? <Modal></Modal> : null
 
             // modal == '열림' ? <Modal></Modal> : '아님'
             // null은 비어있는 html용으로 자주사용
+
+            // 부모 > 자식 state 전송하는법
+            modal == '열림' ? <Modal 작명={state이름}/> : null
           }
 
        
@@ -230,11 +234,15 @@ function App() {
 
 // 단점 : state 가져다 쓸 때 문제생김
 
+
+
+
+
 function Modal(){
   return(
 
     <div className="modal">
-    <h4>제목</h4>
+    <h4>{글제목[0]}</h4>
     <p>날씨</p>
     <p>상세내용</p>
     </div>  
@@ -242,5 +250,18 @@ function Modal(){
 
 }
 
-
-export default App;
+// #8 prps
+// 모달창 안에 첫 째 글제목을 넣어보자
+// 모든 변수는 함수 탈출 불가!
+// function 함수 (){
+//   let a = 10;
+// }
+// 글제목은 <app> 컴포넌트에 있음
+// 그래서 a 실행 불가능
+// <app>은 부모 <Modal>은 자식 컴포넌트임
+// 부모에서 자식으로 state 전송 가능
+//  전송할때는 props 문법 사용해야함
+// 글제목 state 을 정송해보자
+// 부모 > 자식 state 전송하는법
+// <자식컴포넌트 작명={state이름}> 
+ export default App;
