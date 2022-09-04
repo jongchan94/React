@@ -124,7 +124,7 @@ function App() {
       <div className="list">
         {/* <h4 onClick={ ()=> setModal('열림') }>{글제목[2]}</h4> */}
         {/* 느낌표는 우측 자료를 반대로 바궈줌 */} 
-        <h4 onClick ={ ()=> {setModal('열림')}}> {글제목[2]}</h4>
+        <h4 onClick ={ ()=> {setModal( !modal)  }}> {글제목[2]}</h4>
         <p>8월 4일 발행</p>
         
           {/* #7 map */}
@@ -189,13 +189,11 @@ function App() {
             // 조건식 ? 참일때 실행할 코드 : 거짓일 때 실행할 코드
             // html중간에 조건문 쓰렴면 삼항연산자써야함
             // 1 == 1 ? '아님' : '아님'
-            modal == '열림' ? <Modal/> : null
+            modal == '열림' ? <Modal></Modal> : null
 
             // modal == '열림' ? <Modal></Modal> : '아님'
             // null은 비어있는 html용으로 자주사용
           }
-
-
 
        
     </div> //return
