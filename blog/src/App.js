@@ -196,9 +196,12 @@ function App() {
             // null은 비어있는 html용으로 자주사용
 
             // 부모 > 자식 state 전송하는법
-            modal == '열림' ? <Modal 작명={state이름}/> : null
+            // 보통은 오른쪽에 있는 작명이랑 같게 해줌
+            // 
+            modal == '열림' ? <Modal 글제목={글제목}/> : null
           }
-
+ 
+         
        
     </div> //return
   
@@ -238,11 +241,11 @@ function App() {
 
 
 
-function Modal(){
+function Modal(props){
   return(
 
     <div className="modal">
-    <h4>{글제목[0]}</h4>
+    <h4>{props.글제목[1]}</h4>
     <p>날씨</p>
     <p>상세내용</p>
     </div>  
