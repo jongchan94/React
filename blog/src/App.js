@@ -198,7 +198,7 @@ function App() {
             // 부모 > 자식 state 전송하는법
             // 보통은 오른쪽에 있는 작명이랑 같게 해줌
             // 
-            modal == '열림' ? <Modal 글제목={글제목}/> : null
+            modal == '열림' ? <Modal color = "green" 글제목={글제목}/> : null
           }
  
          
@@ -240,14 +240,19 @@ function App() {
 
 
 
+// props 전송은 부모 > 자식만 가능
+// 컴포터가 많아지면 props 쓰는게 귀찮아짐
 
+//만약에 모달창에 색이 여러개인 모달창을 만들려면 ?
 function Modal(props){
   return(
 
-    <div className="modal">
+    <div className="modal" style = { {background : props.color}}>
+      {/* <div className="modal" style = { {background : 'skyblues'}}> */}
     <h4>{props.글제목[1]}</h4>
     <p>날씨</p>
     <p>상세내용</p>
+    <button>글수정</button>
     </div>  
   )
 
