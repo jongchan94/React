@@ -156,7 +156,6 @@ function App() {
 
          }
 
-
         
       </div>
        
@@ -252,7 +251,7 @@ function Modal(props){
     <h4>{props.글제목[1]}</h4>
     <p>날씨</p>
     <p>상세내용</p>
-    <button>글수정</button>
+    <button onClick = { ()= {}}>글수정</button>
     </div>  
   )
 
